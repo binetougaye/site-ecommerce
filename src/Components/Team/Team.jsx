@@ -1,18 +1,16 @@
 import React from "react";
 import { teams } from "../../utils/data";
+import Title from "../Title/Title";
 function Team() {
     return (
         <div className="mt-[70px]">
-            <div className="text-center">
-                <h5 className="text-[#adb5bd] text-[13px]">Team</h5>
-                <h1 className="text-[40px]">Leadership</h1>
-            </div>
-            <div className="flex mt-16 gap-12">
+            <Title title="Leadership" text="Team" />
+            <div className="flex md:flex-row flex-col md:justify-start justify-center md:items-start items-center mt-16 gap-12">
                 {teams &&
                     teams?.map((team, index) => (
                         <div
                             key={index}
-                            className="w-[400px] relative mt-4 h-[430px] group mx-auto dark:bg-black  bg-white dark:border-0 border rounded-md dark:text-white text-black flex hover:cursor-pointer flex-col"
+                            className="md:w-[400px] w-full relative mt-4 h-[430px] group mx-auto dark:bg-black  bg-white dark:border-0 border rounded-md dark:text-white text-black flex hover:cursor-pointer flex-col"
                         >
                             <div className="w-full  rounded-t-md h-[350px] group-hover:h-[410px] overflow-hidden transition-all duration-300">
                                 <img
