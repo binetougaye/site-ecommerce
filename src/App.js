@@ -1,4 +1,5 @@
 import './App.css';
+import Footer from './Component/Footer';
 import Blog from './Pages/Blog/Blog';
 import Contact from './Pages/Contact/Contact';
 import Testimonials from './Pages/Testimonials/Testimonials';
@@ -21,12 +22,14 @@ function App() {
           <Testimonials />
           <Blog />
           <Contact />
+          <Footer />
         </div>
 
       </div>} />
       <Route path='/register' element={<Inscription />} />
 
     </Routes>
+
 
   );
 }
