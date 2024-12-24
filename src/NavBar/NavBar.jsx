@@ -1,6 +1,5 @@
 import React from 'react'
 import '../App.css'
-// import image1 from './images/1.jpg';
 
 function NavBar() {
   return (
@@ -38,31 +37,11 @@ function NavBar() {
  <section className='gros-image pt-5'>
    
   </section> 
- <section className='pt-5'>
-    <div className='text-center'>
-    <p className='text-gray-400'>POPULAR PRODUCTS</p>
-    <h1 className='text-2xl font-black '>Our Products</h1>
-    <p className='text-gray '>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias <br />
-     minima asperiores ab repellendus molestiae debitis, quidem deserunt magni, laudantium <br />
-      rem delectus, veniam corporis minus!</p>
-    </div>
-    <div className='flex justify-center  m-auto pt-5 '>
-      <div className=''><img src="/images/model1.jpg.webp" alt=""  className=' h-auto object-cover model m-auto'/>
-      <p className='text-center hover:text-red-500 text-xl'>Wild West Hoodie</p>
-      <div>
-        <div>
-          
-        </div>
-        <div></div>
-      </div>
-      </div>  
-   <div className=''><img src="/images/model_2_bg.jpeg" alt="" className='h-auto object-cover model m-auto'/></div>
-    <div className=''><img src="images/model_3_bg.jpg.webp" alt="" className=' h-auto object-cover model m-auto'/></div>
-    </div>
-  </section>  
 </div>
 
   )
 }
 
 export default NavBar
+
+
