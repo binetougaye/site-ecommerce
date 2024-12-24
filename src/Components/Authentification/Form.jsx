@@ -1,6 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import { useEffect } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import { Link } from "react-router-dom";
 import axios from "axios";
 
 const Form = () => {
@@ -17,7 +18,7 @@ const Form = () => {
                 data
             );
             console.log("Données envoyées avec succès :", response.data);
-            alert("Inscription réussie !");
+            toast("Inscription réussie !");
         } catch (error) {
             console.error(
                 "Erreur lors de l'envoi :",
@@ -29,6 +30,7 @@ const Form = () => {
 
     return (
         <div className="bg-gray-100 flex items-center justify-center min-h-screen">
+            <ToastContainer />
             <div className="bg-white shadow-lg rounded-lg p-8 w-full max-w-md">
                 <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">
                     Inscription
@@ -174,7 +176,7 @@ const Form = () => {
                         type="submit"
                         className="w-full bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring focus:ring-blue-300"
                     >
-                        S'inscrire
+                        <Link to="/">S'inscrire</Link>
                     </button>
                 </form>
             </div>
