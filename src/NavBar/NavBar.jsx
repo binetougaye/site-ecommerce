@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import "../App.css";
 import Header from "../Header/Header";
-
+import { MdOutlineShoppingCart } from "react-icons/md";
+import { FaRegUser } from "react-icons/fa";
+import { Link } from "react-router-dom";
 function NavBar() {
     const [isOpen, setIsOpen] = useState(false);
 
@@ -35,60 +37,66 @@ function NavBar() {
                     }`}
                 >
                     <li>
-                        <a
-                            href="#"
+                        <Link
+                            to="#"
                             className="text-[16px] hover:text-red-500 duration-500"
                         >
                             Home
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a
-                            href="#"
+                        <Link
+                            to="#"
                             className="text-[16px] hover:text-red-500 duration-500"
                         >
                             Products
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a
-                            href="#"
+                        <Link
+                            to="#"
                             className="text-[16px] hover:text-red-500 duration-500"
                         >
                             About Us
-                        </a>
+                        </Link>
                     </li>
+
                     <li>
-                        <a
-                            href="#"
-                            className="text-[16px] hover:text-red-500 duration-500"
-                        >
-                            Special
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href="#"
+                        <Link
+                            to="#"
                             className="text-[16px] hover:text-red-500 duration-500"
                         >
                             Testimonials
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a
-                            href="#"
+                        <Link
+                            to="#"
                             className="text-[16px] hover:text-red-500 duration-500"
                         >
                             Blog
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a
-                            href="#"
-                            className="text-[16px] hover:text-red-500 duration-500"
+                        <Link
+                            to="/register"
+                            className="text-[24px] hover:text-red-500 duration-500"
                         >
-                            Contact
-                        </a>
+                            <FaRegUser />
+                        </Link>
+                    </li>
+                    <li className="relative">
+                        <Link
+                            to=""
+                            className="text-[24px] relative hover:text-red-500 duration-500"
+                        >
+                            <MdOutlineShoppingCart />
+                        </Link>
+                        <div>
+                            <span className="bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full absolute -top-2 -right-2">
+                                0
+                            </span>
+                        </div>
                     </li>
                 </ul>
             </nav>

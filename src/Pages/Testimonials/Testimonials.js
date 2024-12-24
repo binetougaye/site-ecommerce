@@ -21,7 +21,7 @@ export default function Testimonials() {
   };
 
   return (
-    <div className="p-20 mb-5">
+    <section id="testimonials" className="p-20 mb-5">
       {/* Titre */}
       <p className="text-center text-gray-400 font-bold">People Says</p>
       <p className="text-3xl font-bold text-center mb-8">Testimonials</p>
@@ -42,7 +42,7 @@ export default function Testimonials() {
             >
               <img
                 src={item.img}
-                alt="image"
+                alt="img"
                 className="object-cover rounded-full mx-auto mb-4"
                 style={{ width: "200px", height: "200px" }}
               />
@@ -60,13 +60,12 @@ export default function Testimonials() {
         {ElementTestimonials.map((_, index) => (
           <button
             key={index}
-            className={`w-4 h-4 rounded-full ${
-              currentIndex === index ? "bg-orange-500" : "bg-gray-300"
-            }`}
+            className={`w-4 h-4 rounded-full ${currentIndex === index ? "bg-orange-500" : "bg-gray-300"
+              }`}
             onClick={() => goToSlide(index)}
           ></button>
         ))}
       </div>
-    </div>
+    </section>
   );
 }
