@@ -1,32 +1,11 @@
-import React from "react";
-import { useForm } from "react-hook-form";
+import React, { useContext } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import { Link } from "react-router-dom";
-import axios from "axios";
+import { ContextProvider } from "../../context/Provider";
 
 const Form = () => {
-    const {
-        register,
-        handleSubmit,
-        watch,
-        formState: { errors },
-    } = useForm();
-    const onSubmit = async (data) => {
-        try {
-            const response = await axios.post(
-                "http://localhost:8000/api/inscription",
-                data
-            );
-            console.log("Données envoyées avec succès :", response.data);
-            toast("Inscription réussie !");
-        } catch (error) {
-            console.error(
-                "Erreur lors de l'envoi :",
-                error.response?.data || error.message
-            );
-            alert("Une erreur est survenue. Veuillez réessayer.");
-        }
-    };
+    const { onSubmit, register, handleSubmit, errors } =
+        useContext(ContextProvider);
 
     return (
         <div className="bg-gray-100 flex items-center justify-center min-h-screen">
@@ -176,7 +155,8 @@ const Form = () => {
                         type="submit"
                         className="w-full bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring focus:ring-blue-300"
                     >
-                        <Link to="/">S'inscrire</Link>
+                        {/* <Link to="/">S'inscrire</Link> */}
+                        S'inscrire
                     </button>
                 </form>
             </div>
