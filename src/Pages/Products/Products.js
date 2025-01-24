@@ -111,9 +111,9 @@ export default function Products() {
                         </div>
                 </div>
             </div>
-            <div className="bg-slate-100">
-            <FeaturedProducts/>
-      </div>
+            <div className="bg-slate-100 h-auto min-h-screen px-4 md:px-8 lg:px-16 py-10">
+    <FeaturedProducts />
+</div>
      </div>
     );
 }
